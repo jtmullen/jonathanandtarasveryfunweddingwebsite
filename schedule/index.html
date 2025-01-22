@@ -21,26 +21,6 @@
 </style>
 </head>
 <body>
-<iframe id="site" onLoad="console.log(this.contentWindow.location);">>
-  <script>
-    window.location.replace("https://jonathan-tara.wedsites.com/schedule" + window.location.search);
-  </script>
-</iframe>
-<script>
-  document.getElementById("site").src = "https://jonathan-tara.wedsites.com/schedule" + window.location.hash.substr(1) + window.location.search + "#/reload";
-  window.addEventListener("message", (event) => {
-    if (event.origin.split('.').slice(1).join('.').replace(/\/$/, "") !== "wedsites.com") {
-      return;
-    }
-    if (event.data.reload) {
-      history.pushState(event.data.url, event.data.title, "/#" + event.data.path);
-    }
-    document.title = event.data.title;
-  }, false);
-
-  window.onpopstate = function(event) {
-    location.reload();
-  };
-</script>
+<script>window.location.replace("ttps://jonathan-tara.wedsites.com/schedule");</script>
 </body>
 </html>
